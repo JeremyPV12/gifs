@@ -4,6 +4,20 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 ## Development server
 
+"ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "build:href":"ng build --base-href",
+    "build:github":"npm run delete:docs && npm run build:href && npm run copy:dist",
+    "delete:docs":"del docs",
+    "copy:dist":"copyfiles dist/gifs/browser/* ./docs -f"
+
+npm install del-cli --save-dev
+npm i copyfiles --save-dev    
+
+
 To start a local development server, run:
 
 ```bash
