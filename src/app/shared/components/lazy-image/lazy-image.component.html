@@ -1,0 +1,17 @@
+<picture class="bg-black bg-cover" >
+
+  <img 
+    [src]="urlImage" 
+    [alt]="alt || 'no title'" alt="" 
+    class="bg-cover w-full h-40 rounded-t-xl"
+    [ngClass]="loadImage ? '' : 'hidden'"
+    (load)="onLoadImage()"
+  >
+
+  <img 
+    *ngIf="!loadImage"
+    src="./svg/loader.svg" 
+    alt=""
+    class="bg-black w-full h-40 rounded-t-xl"
+  >
+</picture>

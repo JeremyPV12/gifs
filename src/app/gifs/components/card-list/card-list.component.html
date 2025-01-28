@@ -1,0 +1,7 @@
+<section class="w-full grid grid-cols-4 px-10 gap-10" >
+    @for (gif of gifs; track $index) {
+        <gifs-gif-card [gif]="gif" ></gifs-gif-card>
+    }@empty {
+        <h3>There isn't any seaching</h3>
+    }
+</section>
